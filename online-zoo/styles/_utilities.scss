@@ -1,12 +1,33 @@
 @use "variables" as *;
 
-.container {
-    width: 100%;
-    max-width: 1400px;
+.h1 {
+    font-size: 82px;
+    font-weight: 800;
+    letter-spacing: 1%;
+    color: $turquoise;
+    text-transform: uppercase;
 }
 
-@media (max-width: 1400px) {
-    .container {
-        max-width: 1000px;
-    }
+.h2 {
+    font-size: 54px;
+    font-weight: 500;
+    color: $turquoise;
+    text-transform: uppercase;
+}
+
+.h3 {
+    font-size: 42px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.text {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+}
+
+.arrow {
+    width: 24px;
+    height: 22px;
 }

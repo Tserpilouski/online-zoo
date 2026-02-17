@@ -1,1 +1,81 @@
 @use "../../../styles/variables" as *;
+
+.feed {
+    background-color: $navy;
+    display: flex;
+    justify-content: center;
+    padding-top: 91px;
+
+    &__container {
+        max-width: 1400px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        text-align: start;
+        color: $white;
+        margin-bottom: 100px;
+    }
+
+    &__divider {
+        margin-bottom: 82px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        gap: 160px;
+    }
+
+    &__item-img {
+        width: 560px;
+        height: 364px;
+        object-fit: cover;
+    }
+
+    &__item-icon {
+        width: fit-content;
+    }
+
+    &__item-box {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__item-title {
+        max-width: 502px;
+        color: $white;
+        font-size: 26px;
+        line-height: 34px;
+    }
+
+    &__item-description {
+        color: $white;
+        max-width: 560px;
+    }
+}
+
+.divider-line {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 93px;
+
+    &__num {
+        color: $white;
+        font-size: 26px;
+        line-height: 34px;
+    }
+
+    &__line {
+        flex: 1;
+        height: 0;
+        margin: 0;
+        border: none;
+        border-top: 1px solid $white;
+    }
+}

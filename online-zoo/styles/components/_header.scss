@@ -11,6 +11,8 @@ header {
     display: flex;
     justify-content: space-between;
     margin: 0 20px 0 20px;
+    width: 100%;
+    max-width: 1400px;
 
     &__menu-box {
         display: flex;
@@ -67,5 +69,11 @@ header {
         &__menu-box {
             display: none;
         }
+    }
+}
+
+@media (max-width: 1400px) {
+    .header {
+        max-width: 1000px;
     }
 }
