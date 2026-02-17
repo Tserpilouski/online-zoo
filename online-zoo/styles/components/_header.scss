@@ -1,5 +1,71 @@
 @use "../variables" as *;
 
-.header-zoo {
+header {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
     background-color: $orange;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px 0 20px;
+
+    &__menu-box {
+        display: flex;
+        align-items: center;
+        gap: 67px;
+    }
+
+    &__nav {
+        display: flex;
+        gap: 48px;
+    }
+
+    &__nav-item {
+        font-size: 18px;
+        line-height: 27px;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        &:hover {
+            color: $turquoise;
+        }
+
+        &--active {
+            color: $turquoise;
+        }
+    }
+
+    &__social {
+        display: flex;
+        gap: 30px;
+    }
+}
+
+@media (max-width: $breakpoint-lg) {
+    .header {
+        &__nav {
+            gap: 30px;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .header {
+        &__social {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-sm) {
+    .header {
+        margin: 0 47px 0 20px;
+
+        &__menu-box {
+            display: none;
+        }
+    }
 }

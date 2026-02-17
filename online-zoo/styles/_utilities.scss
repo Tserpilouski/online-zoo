@@ -1,0 +1,12 @@
+@use "variables" as *;
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+}
+
+@media (max-width: 1400px) {
+    .container {
+        max-width: 1000px;
+    }
+}
