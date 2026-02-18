@@ -12,10 +12,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 0 40px;
     }
 
     &__title {
-        text-align: start;
+        width: 100%;
         color: $white;
         margin-bottom: 100px;
     }
@@ -25,9 +26,11 @@
     }
 
     &__item {
+        width: 100%;
         display: flex;
         flex-direction: row;
         gap: 160px;
+        margin-bottom: 100px;
     }
 
     &__item-img {
@@ -56,6 +59,7 @@
     &__item-description {
         color: $white;
         max-width: 560px;
+        text-align: start;
     }
 }
 
@@ -77,5 +81,30 @@
         margin: 0;
         border: none;
         border-top: 1px solid $white;
+    }
+}
+
+@media (max-width: $breakpoint-lg) {
+    .feed {
+        &__title {
+            margin-left: 80px;
+        }
+
+        &__item {
+            gap: 10px;
+        }
+
+        &__item-box {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__item-title {
+            text-align: center;
+        }
+
+        &__item-description {
+            text-align: center;
+        }
     }
 }

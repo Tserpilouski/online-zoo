@@ -1,13 +1,18 @@
 @use "../../../styles/variables" as *;
 
 .works {
-    max-width: 1400px;
-    width: 100%;
     display: flex;
-    flex-direction: column;
-    gap: 150px;
-    margin: 0 auto;
-    padding: 150px 0;
+    justify-content: center;
+
+    &__container {
+        max-width: 1400px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
+        padding: 150px 0px;
+        margin: 0 20px;
+    }
 
     &__item {
         display: flex;
@@ -24,5 +29,25 @@
 .work-box {
     &__title {
         margin-bottom: 50px;
+    }
+}
+
+@media (max-width: $breakpoint-lg) {
+    .works {
+        &__item {
+            max-width: 660px;
+            flex-direction: column-reverse;
+
+            &:nth-child(2) {
+                flex-direction: column-reverse;
+                margin-left: auto;
+            }
+        }
+    }
+
+    .work-box {
+        &__img {
+            max-width: 660px;
+        }
     }
 }
