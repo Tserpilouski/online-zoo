@@ -9,6 +9,10 @@
             href="../../assets/icons/favicon.svg"
             type="image/svg+xml"
         />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
         <header>
@@ -177,7 +181,7 @@
             <section class="works">
                 <div class="works__container">
                     <div class="works__item work-box">
-                        <div>
+                        <div class="work-box__description">
                             <h2 class="work-box__title h2">
                                 Welcome to the Online Zoo!
                             </h2>
@@ -199,8 +203,8 @@
                             alt="Welcome to zoo"
                         />
                     </div>
-                    <div class="works__item">
-                        <div class="work-box">
+                    <div class="works__item work-box">
+                        <div class="work-box__description">
                             <h2 class="work-box__title h2">How we work</h2>
                             <p class="text">
                                 Online Zoo is a nonprofit committed to inspiring
@@ -225,8 +229,10 @@
             <section class="donation">
                 <div class="donation__container">
                     <div class="donation__info">
-                        <h3 class="h3">Your donation makes a difference!</h3>
-                        <p class="text">
+                        <h3 class="donation__title h3">
+                            Your donation makes a difference!
+                        </h3>
+                        <p class="donation__text text">
                             The Online Zoo's animal webcams are some of the most
                             famous on the internet. Tune in to watch your
                             favourite animals — live, 24/7!
@@ -248,13 +254,11 @@
                         <hr class="divider-line__line" />
                     </div>
                     <div class="feed__item">
-                        <div>
-                            <img
-                                class="feed__item-img"
-                                src="../../assets/images/monkey.png"
-                                alt=""
-                            />
-                        </div>
+                        <img
+                            class="feed__item-img"
+                            src="../../assets/images/monkey.png"
+                            alt=""
+                        />
                         <div class="feed__item-box">
                             <img
                                 class="feed__item-icon"
@@ -336,6 +340,19 @@
                                 donation can make a difference even if it is
                                 small.
                             </p>
+                        </div>
+                    </div>
+                    <div class="feed__donate">
+                        <div></div>
+                        <div>
+                            <button class="btn btn--orange-bg">
+                                <span>donate now</span>
+                                <img
+                                    class="arrow"
+                                    src="../../assets//icons/arrow-r.svg"
+                                    alt=""
+                                />
+                            </button>
                         </div>
                     </div>
                 </div>
