@@ -30,4 +30,8 @@
 .arrow {
     width: 24px;
     height: 22px;
+
+    &--rotate-180 {
+        transform: rotate(180deg);
+    }
 }
