@@ -1,197 +1,207 @@
-@use "../../../styles/variables" as *;
+@use '../../../styles/variables' as *;
 
 .feed {
-    background-color: $navy;
-    display: flex;
-    justify-content: center;
-    padding-top: 91px;
-    padding-bottom: 100px;
+	background-color: $navy;
+	display: flex;
+	justify-content: center;
+	padding-top: 91px;
+	padding-bottom: 100px;
 
-    &__container {
-        max-width: 1400px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0 40px;
-    }
+	&__container {
+		max-width: 1400px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 0 40px;
+	}
 
-    &__title {
-        width: 100%;
-        color: $white;
-        margin-bottom: 100px;
-    }
+	&__title {
+		width: 100%;
+		color: $white;
+		margin-bottom: 100px;
+	}
 
-    &__divider {
-        margin-bottom: 82px;
-    }
+	&__divider {
+		margin-bottom: 82px;
+	}
 
-    &__item {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        gap: 160px;
-        margin-bottom: 100px;
-    }
+	&__item {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		gap: 160px;
+		margin-bottom: 100px;
+	}
 
-    &__item-img {
-        width: 560px;
-        height: 364px;
-        object-fit: cover;
-    }
+	&__item-img {
+		flex: 1;
+		max-width: 550px;
+		border-radius: 5px;
+		overflow: hidden;
 
-    &__item-icon {
-        width: fit-content;
-    }
+		& img {
+			width: 100%;
+			height: 364px;
+			object-fit: cover;
+		}
+	}
 
-    &__item-box {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
+	&__item-icon {
+		width: fit-content;
+	}
 
-    &__item-title {
-        max-width: 502px;
-        color: $white;
-        font-size: 26px;
-        line-height: 34px;
-    }
+	&__item-box {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
 
-    &__item-description {
-        color: $white;
-        max-width: 560px;
-        text-align: start;
-    }
+	&__item-title {
+		max-width: 502px;
+		color: $white;
+		font-size: 26px;
+		line-height: 34px;
+	}
 
-    &__donate {
-        width: 100%;
-        display: flex;
+	&__item-description {
+		color: $white;
+		max-width: 560px;
+		text-align: start;
+	}
 
-        & > * {
-            width: 50%;
-        }
+	&__donate {
+		width: 100%;
+		display: flex;
 
-        & div:first-child {
-            width: 560px;
-        }
+		& > * {
+			width: 50%;
+		}
 
-        & div:last-child {
-            padding-left: 20px;
-        }
-    }
+		& div:first-child {
+			width: 560px;
+		}
 
-    &__btn {
-        max-width: 240px;
-        width: 100%;
-        height: 74px;
-    }
+		& div:last-child {
+			padding-left: 20px;
+		}
+	}
+
+	&__btn {
+		max-width: 240px;
+		width: 100%;
+		height: 74px;
+	}
 }
 
 .divider-line {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    gap: 93px;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	gap: 93px;
 
-    &__num {
-        color: $white;
-        font-size: 26px;
-        line-height: 34px;
-    }
+	&__num {
+		color: $white;
+		font-size: 26px;
+		line-height: 34px;
+	}
 
-    &__line {
-        flex: 1;
-        height: 0;
-        margin: 0;
-        border: none;
-        border-top: 1px solid $white;
-    }
+	&__line {
+		flex: 1;
+		height: 0;
+		margin: 0;
+		border: none;
+		border-top: 1px solid $white;
+	}
 }
 
 @media (max-width: $breakpoint-lg) {
-    .feed {
-        &__title {
-            margin-left: 80px;
-        }
+	.feed {
+		&__title {
+			padding-left: 80px;
+		}
 
-        &__item {
-            gap: 10px;
-        }
+		&__item {
+			gap: 10px;
+		}
 
-        &__item-box {
-            flex-direction: column;
-            align-items: center;
-        }
+		&__item-box {
+			flex-direction: column;
+			align-items: center;
+		}
 
-        &__item-title {
-            text-align: center;
-        }
+		&__item-title {
+			text-align: center;
+		}
 
-        &__item-description {
-            text-align: center;
-        }
-    }
+		&__item-description {
+			text-align: center;
+		}
+	}
 }
 
 @media (max-width: $breakpoint-sm) {
-    .feed {
-        &__container {
-            margin: 0;
-        }
-        &__title {
-            margin-bottom: 50px;
-            margin-left: 0;
-            text-align: center;
-        }
+	.feed {
+		&__container {
+			margin: 0;
+		}
+		&__title {
+			margin-bottom: 50px;
+			margin-left: 0;
+			text-align: center;
+		}
 
-        &__item {
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 50px;
-            margin-bottom: 50px;
-        }
+		&__item {
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 50px;
+			margin-bottom: 50px;
+		}
 
-        &__item-img {
-            width: 100%;
-            object-fit: cover;
-        }
+		&__item-img {
+			width: 100%;
+			max-width: 100%;
+			border-radius: 0;
+		}
 
-        &__item-box {
-            padding: 0 20px;
-            gap: 30px;
-        }
+		&__item-box {
+			padding: 0 20px;
+			gap: 30px;
+		}
 
-        &__item-description {
-            max-width: 100%;
-        }
+		&__item-description {
+			max-width: 100%;
+		}
 
-        &__donate {
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
+		&__donate {
+			flex-direction: column;
+			align-items: center;
+			gap: 30px;
 
-            & > * {
-                width: 100%;
-            }
+			& > * {
+				width: 100%;
+			}
 
-            & div:first-child {
-                width: 0%;
-            }
+			& div:first-child {
+				width: 0%;
+			}
 
-            & div:last-child {
-                padding-left: 0;
-                display: flex;
-                justify-content: center;
-            }
-        }
+			& div:last-child {
+				padding-left: 0;
+				display: flex;
+				justify-content: center;
+			}
+		}
 
-        &__divider {
-            margin-bottom: 50px;
-        }
-    }
+		&__divider {
+			margin-bottom: 50px;
+		}
+	}
 
-    .divider-line {
-        padding: 0 20px;
-        gap: 10px;
-    }
+	.divider-line {
+		padding: 0 20px;
+		gap: 10px;
+	}
 }

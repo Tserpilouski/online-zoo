@@ -1,0 +1,106 @@
+@use '../../../styles/variables' as *;
+
+.animals {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 136px 135px;
+
+	&__description {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 50px;
+		margin-bottom: 100px;
+	}
+
+	&__title {
+		max-width: 655px;
+		width: 100%;
+		text-align: center;
+	}
+
+	&__text {
+		max-width: 537px;
+		width: 100%;
+		text-align: center;
+	}
+
+	&__grid-box {
+		width: 100%;
+		max-width: 1400px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, minmax(0, 658px));
+		gap: 40px;
+		margin-bottom: 100px;
+	}
+
+	&__card {
+		background-color: $navy;
+
+		img {
+			width: 100%;
+		}
+
+		&--main {
+			grid-row: span 1;
+			grid-column: span 2;
+		}
+	}
+
+	&__card-description {
+		padding: 30px 25px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 50px;
+		color: $white;
+	}
+}
+
+@media (max-width: $breakpoint-lg) {
+	.animals {
+		padding: 150px 135px;
+		&__description {
+			gap: 30px;
+			margin-bottom: 50px;
+		}
+
+		&__grid-box {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(3 minmax(0, 658px));
+			gap: 20px;
+		}
+
+		&__card {
+			&--main {
+				grid-row: span 1;
+				grid-column: span 2;
+			}
+		}
+	}
+}
+
+@media (max-width: $breakpoint-sm) {
+	.animals {
+		padding: 80px 20px;
+
+		&__description {
+			margin-bottom: 70px;
+		}
+
+		&__grid-box {
+			grid-template-columns: repeat(1, 1fr);
+			grid-template-rows: repeat(1 minmax(0, 658px));
+		}
+
+		&__card {
+			&--main {
+				grid-row: span 1;
+				grid-column: span 1;
+			}
+		}
+	}
+}
