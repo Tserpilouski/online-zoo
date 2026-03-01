@@ -1,16 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-#app {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
+@use '../../styles/variables' as *;
+@use '../../styles/base';
+@use '../../styles/components/header';
+@use '../../styles/components/buttons';
+@use '../../styles/components/footer';
+@use '../../styles/utilities';
