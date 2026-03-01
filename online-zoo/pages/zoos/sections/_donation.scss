@@ -1,0 +1,30 @@
+@use '../../../styles/variables' as *;
+
+.live-donate {
+	display: flex;
+	justify-content: center;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: $navy;
+	gap: 156px;
+
+	&__container {
+		max-width: 874px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		color: $white;
+	}
+
+	&__btn-box {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	&__span {
+		font-size: 26px;
+		color: $white;
+	}
+}

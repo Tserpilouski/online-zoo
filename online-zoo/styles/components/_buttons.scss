@@ -99,4 +99,44 @@
 			}
 		}
 	}
+
+	&--arrow {
+		background-color: transparent;
+	}
+
+	&--donate {
+		color: $white;
+		border: none;
+		background-color: transparent;
+		border: 1px solid $white;
+		gap: 0;
+		white-space: nowrap;
+
+		svg {
+			path {
+				fill: $white;
+			}
+		}
+
+		span {
+			margin: 26px 14px;
+		}
+
+		div {
+			padding: 26px 27px;
+			background-color: $orange;
+			border-radius: 5px;
+		}
+
+		&:hover {
+			background-color: $orange;
+			color: $white;
+
+			svg {
+				path {
+					fill: $white;
+				}
+			}
+		}
+	}
 }

@@ -1,0 +1,104 @@
+@use '../../../styles/variables' as *;
+
+.live-cam {
+	display: flex;
+	justify-content: center;
+	padding-top: 50px;
+	padding-bottom: 150px;
+
+	&__container {
+		max-width: 1400px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__header {
+		width: 100%;
+		display: flex;
+		margin-bottom: 46px;
+		justify-content: flex-end;
+	}
+
+	&__btn {
+		padding: 26px 34.86px;
+	}
+
+	&__title {
+		margin-right: 196px;
+	}
+
+	&__img {
+		margin-bottom: 100px;
+	}
+
+	&__views {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 30px;
+	}
+
+	&__slider {
+		display: flex;
+		gap: 40px;
+	}
+
+	&__slider-box {
+		display: flex;
+		gap: 40px;
+	}
+
+	&__card {
+		position: relative;
+		border: 3px solid transparent;
+		border-radius: 5px;
+		cursor: pointer;
+		&--active {
+			border: 3px solid $orange;
+		}
+	}
+
+	&__card-img {
+		display: block;
+		height: 100%;
+	}
+
+	&__card-title {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		color: $white;
+		text-transform: uppercase;
+		border-bottom: 1px solid $white;
+		border-right: 1px solid $white;
+		padding: 6px 40px;
+		border-bottom-right-radius: 5px;
+	}
+
+	&__card-play {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 5;
+
+		&--active {
+			display: none;
+		}
+	}
+
+	&__card:hover {
+		.live-cam__card-play {
+			display: none;
+		}
+
+		.live-cam__card-play--active {
+			display: block;
+		}
+	}
+}

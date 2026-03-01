@@ -36,7 +36,12 @@
 						</clipPath>
 					</defs>
 				</svg>
-				<div class="header__menu-box">
+				<button class="header__burger" id="header-burger" aria-label="Open menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<div class="header__menu-box">
 					<nav>
 						<ul class="header__nav">
 							<li>
@@ -113,6 +118,24 @@
 					</div>
 				</div>
 			</div>
+			<div class="header__mobile-menu" id="header-mobile-menu">
+				<button class="header__mobile-close" id="header-mobile-close" aria-label="Close menu">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M2 2L22 22M22 2L2 22" stroke="black" stroke-width="2.5" stroke-linecap="round" />
+					</svg>
+				</button>
+				<nav>
+					<ul class="header__mobile-nav">
+						<li><a class="header__nav-item header__nav-item--active" href="../landing/index.html">about</a></li>
+						<li><a class="header__nav-item" href="../map/index.html">map</a></li>
+						<li><a class="header__nav-item" href="../zoos/index.html">zoos</a></li>
+						<li><a class="header__nav-item" href="../contact-us/index.html">contact us</a></li>
+						<li>
+							<a class="header__nav-item" href="https://www.figma.com/design/lnK11foY8Aoa6oOlDXovVN/Online-ZOO-Project?node-id=0-1&p=f&t=5FTVL6Ddf3UPTvyt-0">design</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
 		</header>
 		<main>
 			<section class="hero">
@@ -166,8 +189,17 @@
 					</div>
 					<div class="donation__amount">
 						<span class="donation__label">Quick Donate</span>
-						<button class="btn btn--orange-bg">
-							<span>Donate Now</span>
+						<button class="btn btn--donate">
+							<span>$ Donation Amount</span>
+							<div>
+								<svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M13.2098 0.119971C13.0277 0.199174 12.8622 0.315255 12.7229 0.461565C12.5833 0.607505 12.4725 0.780876 12.397 0.971748C12.3214 1.16262 12.2825 1.36724 12.2825 1.57389C12.2825 1.78055 12.3214 1.98517 12.397 2.17604C12.4725 2.36691 12.5833 2.54028 12.7229 2.68622L18.7506 9H1.6C1.17565 9 0.768688 9.21071 0.468629 9.58579C0.168571 9.96086 0 10.4696 0 11C0 11.5304 0.168571 12.0391 0.468629 12.4142C0.768688 12.7893 1.17565 13 1.6 13H18.7514L12.7229 19.3146C12.4414 19.6096 12.2833 20.0097 12.2833 20.4269C12.2833 20.8441 12.4414 21.2443 12.7229 21.5393C13.0045 21.8343 13.3863 22 13.7845 22C14.1826 22 14.5645 21.8343 14.846 21.5393L23.842 12.1127C23.9816 11.9668 24.0924 11.7934 24.168 11.6026C24.2436 11.4117 24.2825 11.2071 24.2825 11.0004C24.2825 10.7938 24.2436 10.5891 24.168 10.3983C24.0924 10.2074 23.9816 10.034 23.842 9.88808L14.846 0.461565C14.7067 0.315255 14.5413 0.199174 14.3591 0.119971C14.177 0.0407677 13.9817 0 13.7845 0C13.5873 0 13.392 0.0407677 13.2098 0.119971Z"
+										fill="white" />
+								</svg>
+							</div>
 						</button>
 					</div>
 				</div>
@@ -181,7 +213,7 @@
 					</p>
 					<div class="pets__list">
 						<div class="pets__arrows">
-							<button class="btn btn--navy-border">
+							<button id="pets-prev" class="btn btn--navy-border">
 								<svg
 									class="arrow--rotate-180"
 									width="25"
@@ -196,7 +228,7 @@
 										fill="white" />
 								</svg>
 							</button>
-							<button class="btn btn--navy-border">
+							<button id="pets-next" class="btn btn--navy-border">
 								<svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path
 										fill-rule="evenodd"
@@ -208,7 +240,7 @@
 						</div>
 						<div class="pets__items">
 							<div class="pet-card">
-								<img class="pet-card__img" src="../../assets/images/giant-panda.png" alt="" />
+								<img class="pet-card__img" src="../../assets/images/giant-panda.png" alt="Giant Panda" />
 								<span class="pet-card__name">Lucas</span>
 								<div class="pet-card__description">
 									<span class="pet-card__title">Giant Panda</span>
@@ -216,7 +248,7 @@
 										Native to central China, giant pandas have come to symbolize vulnerable species.
 									</p>
 									<button class="pet-card__btn btn btn--orange-no-bg">
-										<span>view live came</span>
+										<span>view live cam</span>
 										<svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path
 												fill-rule="evenodd"
@@ -228,15 +260,131 @@
 								</div>
 							</div>
 							<div class="pet-card">
-								<img class="pet-card__img" src="../../assets/images/giant-panda.png" alt="" />
-								<span class="pet-card__name">Lucas</span>
+								<img class="pet-card__img" src="../../assets/images/lemur.png" alt="African Lion" />
+								<span class="pet-card__name">Andy</span>
 								<div class="pet-card__description">
-									<span class="pet-card__title">Giant Panda</span>
+									<span class="pet-card__title">Madagascarian Lemur </span>
+									<p class="pet-card__text text">Lemurs are considered the world’s most endangered group of mammals.</p>
+									<button class="pet-card__btn btn btn--orange-no-bg">
+										<span>view live cam</span>
+										<svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M13.2098 0.119971C13.0277 0.199174 12.8622 0.315255 12.7229 0.461565C12.5833 0.607505 12.4725 0.780876 12.397 0.971748C12.3214 1.16262 12.2825 1.36724 12.2825 1.57389C12.2825 1.78055 12.3214 1.98517 12.397 2.17604C12.4725 2.36691 12.5833 2.54028 12.7229 2.68622L18.7506 9H1.6C1.17565 9 0.768688 9.21071 0.468629 9.58579C0.168571 9.96086 0 10.4696 0 11C0 11.5304 0.168571 12.0391 0.468629 12.4142C0.768688 12.7893 1.17565 13 1.6 13H18.7514L12.7229 19.3146C12.4414 19.6096 12.2833 20.0097 12.2833 20.4269C12.2833 20.8441 12.4414 21.2443 12.7229 21.5393C13.0045 21.8343 13.3863 22 13.7845 22C14.1826 22 14.5645 21.8343 14.846 21.5393L23.842 12.1127C23.9816 11.9668 24.0924 11.7934 24.168 11.6026C24.2436 11.4117 24.2825 11.2071 24.2825 11.0004C24.2825 10.7938 24.2436 10.5891 24.168 10.3983C24.0924 10.2074 23.9816 10.034 23.842 9.88808L14.846 0.461565C14.7067 0.315255 14.5413 0.199174 14.3591 0.119971C14.177 0.0407677 13.9817 0 13.7845 0C13.5873 0 13.392 0.0407677 13.2098 0.119971Z"
+												fill="white" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="pet-card">
+								<img class="pet-card__img" src="../../assets/images/gorilla.png" alt="Bengal Tiger" />
+								<span class="pet-card__name">Glen</span>
+								<div class="pet-card__description">
+									<span class="pet-card__title">Gorilla in Congo </span>
 									<p class="pet-card__text text">
-										Native to central China, giant pandas have come to symbolize vulnerable species.
+										Variety of snacks very important for the healthy life of gorillas and his plenty of babies.
 									</p>
 									<button class="pet-card__btn btn btn--orange-no-bg">
-										<span>view live came</span>
+										<span>view live cam</span>
+										<svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M13.2098 0.119971C13.0277 0.199174 12.8622 0.315255 12.7229 0.461565C12.5833 0.607505 12.4725 0.780876 12.397 0.971748C12.3214 1.16262 12.2825 1.36724 12.2825 1.57389C12.2825 1.78055 12.3214 1.98517 12.397 2.17604C12.4725 2.36691 12.5833 2.54028 12.7229 2.68622L18.7506 9H1.6C1.17565 9 0.768688 9.21071 0.468629 9.58579C0.168571 9.96086 0 10.4696 0 11C0 11.5304 0.168571 12.0391 0.468629 12.4142C0.768688 12.7893 1.17565 13 1.6 13H18.7514L12.7229 19.3146C12.4414 19.6096 12.2833 20.0097 12.2833 20.4269C12.2833 20.8441 12.4414 21.2443 12.7229 21.5393C13.0045 21.8343 13.3863 22 13.7845 22C14.1826 22 14.5645 21.8343 14.846 21.5393L23.842 12.1127C23.9816 11.9668 24.0924 11.7934 24.168 11.6026C24.2436 11.4117 24.2825 11.2071 24.2825 11.0004C24.2825 10.7938 24.2436 10.5891 24.168 10.3983C24.0924 10.2074 23.9816 10.034 23.842 9.88808L14.846 0.461565C14.7067 0.315255 14.5413 0.199174 14.3591 0.119971C14.177 0.0407677 13.9817 0 13.7845 0C13.5873 0 13.392 0.0407677 13.2098 0.119971Z"
+												fill="white" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="pet-card">
+								<img class="pet-card__img" src="../../assets/images/mike.png" alt="Mountain Gorilla" />
+								<span class="pet-card__name">Mike</span>
+								<div class="pet-card__description">
+									<span class="pet-card__title">Chinese Alligator</span>
+									<p class="pet-card__text text">From nose to tail, belly to back, hard scales protect this petite alligator.</p>
+									<button class="pet-card__btn btn btn--orange-no-bg">
+										<span>view live cam</span>
+										<svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M13.2098 0.119971C13.0277 0.199174 12.8622 0.315255 12.7229 0.461565C12.5833 0.607505 12.4725 0.780876 12.397 0.971748C12.3214 1.16262 12.2825 1.36724 12.2825 1.57389C12.2825 1.78055 12.3214 1.98517 12.397 2.17604C12.4725 2.36691 12.5833 2.54028 12.7229 2.68622L18.7506 9H1.6C1.17565 9 0.768688 9.21071 0.468629 9.58579C0.168571 9.96086 0 10.4696 0 11C0 11.5304 0.168571 12.0391 0.468629 12.4142C0.768688 12.7893 1.17565 13 1.6 13H18.7514L12.7229 19.3146C12.4414 19.6096 12.2833 20.0097 12.2833 20.4269C12.2833 20.8441 12.4414 21.2443 12.7229 21.5393C13.0045 21.8343 13.3863 22 13.7845 22C14.1826 22 14.5645 21.8343 14.846 21.5393L23.842 12.1127C23.9816 11.9668 24.0924 11.7934 24.168 11.6026C24.2436 11.4117 24.2825 11.2071 24.2825 11.0004C24.2825 10.7938 24.2436 10.5891 24.168 10.3983C24.0924 10.2074 23.9816 10.034 23.842 9.88808L14.846 0.461565C14.7067 0.315255 14.5413 0.199174 14.3591 0.119971C14.177 0.0407677 13.9817 0 13.7845 0C13.5873 0 13.392 0.0407677 13.2098 0.119971Z"
+												fill="white" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="pet-card">
+								<img class="pet-card__img" src="../../assets/images/eagles.png" alt="eagles" />
+								<span class="pet-card__name">Sam & Lora</span>
+								<div class="pet-card__description">
+									<span class="pet-card__title">West End Bald Eagles</span>
+									<p class="pet-card__text text">
+										Pair of eagle parents lay and protect eggs, feed their chicks and teach them to hunt and fly.
+									</p>
+									<button class="pet-card__btn btn btn--orange-no-bg">
+										<span>view live cam</span>
+										<svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M13.2098 0.119971C13.0277 0.199174 12.8622 0.315255 12.7229 0.461565C12.5833 0.607505 12.4725 0.780876 12.397 0.971748C12.3214 1.16262 12.2825 1.36724 12.2825 1.57389C12.2825 1.78055 12.3214 1.98517 12.397 2.17604C12.4725 2.36691 12.5833 2.54028 12.7229 2.68622L18.7506 9H1.6C1.17565 9 0.768688 9.21071 0.468629 9.58579C0.168571 9.96086 0 10.4696 0 11C0 11.5304 0.168571 12.0391 0.468629 12.4142C0.768688 12.7893 1.17565 13 1.6 13H18.7514L12.7229 19.3146C12.4414 19.6096 12.2833 20.0097 12.2833 20.4269C12.2833 20.8441 12.4414 21.2443 12.7229 21.5393C13.0045 21.8343 13.3863 22 13.7845 22C14.1826 22 14.5645 21.8343 14.846 21.5393L23.842 12.1127C23.9816 11.9668 24.0924 11.7934 24.168 11.6026C24.2436 11.4117 24.2825 11.2071 24.2825 11.0004C24.2825 10.7938 24.2436 10.5891 24.168 10.3983C24.0924 10.2074 23.9816 10.034 23.842 9.88808L14.846 0.461565C14.7067 0.315255 14.5413 0.199174 14.3591 0.119971C14.177 0.0407677 13.9817 0 13.7845 0C13.5873 0 13.392 0.0407677 13.2098 0.119971Z"
+												fill="white" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="pet-card">
+								<img class="pet-card__img" src="../../assets/images/koala.png" alt="Koala" />
+								<span class="pet-card__name">Liz</span>
+								<div class="pet-card__description">
+									<span class="pet-card__title">Australian Koala</span>
+									<p class="pet-card__text text">
+										The elevated walkways bring you to eye level with the koalas as they perch in their forest.
+									</p>
+									<button class="pet-card__btn btn btn--orange-no-bg">
+										<span>view live cam</span>
+										<svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M13.2098 0.119971C13.0277 0.199174 12.8622 0.315255 12.7229 0.461565C12.5833 0.607505 12.4725 0.780876 12.397 0.971748C12.3214 1.16262 12.2825 1.36724 12.2825 1.57389C12.2825 1.78055 12.3214 1.98517 12.397 2.17604C12.4725 2.36691 12.5833 2.54028 12.7229 2.68622L18.7506 9H1.6C1.17565 9 0.768688 9.21071 0.468629 9.58579C0.168571 9.96086 0 10.4696 0 11C0 11.5304 0.168571 12.0391 0.468629 12.4142C0.768688 12.7893 1.17565 13 1.6 13H18.7514L12.7229 19.3146C12.4414 19.6096 12.2833 20.0097 12.2833 20.4269C12.2833 20.8441 12.4414 21.2443 12.7229 21.5393C13.0045 21.8343 13.3863 22 13.7845 22C14.1826 22 14.5645 21.8343 14.846 21.5393L23.842 12.1127C23.9816 11.9668 24.0924 11.7934 24.168 11.6026C24.2436 11.4117 24.2825 11.2071 24.2825 11.0004C24.2825 10.7938 24.2436 10.5891 24.168 10.3983C24.0924 10.2074 23.9816 10.034 23.842 9.88808L14.846 0.461565C14.7067 0.315255 14.5413 0.199174 14.3591 0.119971C14.177 0.0407677 13.9817 0 13.7845 0C13.5873 0 13.392 0.0407677 13.2098 0.119971Z"
+												fill="white" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="pet-card">
+								<img class="pet-card__img" src="../../assets/images/lion.png" alt="Bald Eagle" />
+								<span class="pet-card__name">Shake</span>
+								<div class="pet-card__description">
+									<span class="pet-card__title">African Lion</span>
+									<p class="pet-card__text text">
+										Lions roam the savannas and grasslands of Africa, hunting and raising cubs in the pride.
+									</p>
+									<button class="pet-card__btn btn btn--orange-no-bg">
+										<span>view live cam</span>
+										<svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M13.2098 0.119971C13.0277 0.199174 12.8622 0.315255 12.7229 0.461565C12.5833 0.607505 12.4725 0.780876 12.397 0.971748C12.3214 1.16262 12.2825 1.36724 12.2825 1.57389C12.2825 1.78055 12.3214 1.98517 12.397 2.17604C12.4725 2.36691 12.5833 2.54028 12.7229 2.68622L18.7506 9H1.6C1.17565 9 0.768688 9.21071 0.468629 9.58579C0.168571 9.96086 0 10.4696 0 11C0 11.5304 0.168571 12.0391 0.468629 12.4142C0.768688 12.7893 1.17565 13 1.6 13H18.7514L12.7229 19.3146C12.4414 19.6096 12.2833 20.0097 12.2833 20.4269C12.2833 20.8441 12.4414 21.2443 12.7229 21.5393C13.0045 21.8343 13.3863 22 13.7845 22C14.1826 22 14.5645 21.8343 14.846 21.5393L23.842 12.1127C23.9816 11.9668 24.0924 11.7934 24.168 11.6026C24.2436 11.4117 24.2825 11.2071 24.2825 11.0004C24.2825 10.7938 24.2436 10.5891 24.168 10.3983C24.0924 10.2074 23.9816 10.034 23.842 9.88808L14.846 0.461565C14.7067 0.315255 14.5413 0.199174 14.3591 0.119971C14.177 0.0407677 13.9817 0 13.7845 0C13.5873 0 13.392 0.0407677 13.2098 0.119971Z"
+												fill="white" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="pet-card">
+								<img class="pet-card__img" src="../../assets/images/tiger-slider.png" alt="Crocodile" />
+								<span class="pet-card__name">Senja</span>
+								<div class="pet-card__description">
+									<span class="pet-card__title">Sumatran Tiger</span>
+									<p class="pet-card__text text">
+										Sumatran Tigers are the smallest of the five sub-species, and are found in Indonesia.
+									</p>
+									<button class="pet-card__btn btn btn--orange-no-bg">
+										<span>view live cam</span>
 										<svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path
 												fill-rule="evenodd"
@@ -357,9 +505,115 @@
 								</p>
 								<span class="review-card__user-name">Karen Maithlan</span>
 							</div>
+							<div class="review-card">
+								<div class="review-card__icon">
+									<svg width="59" height="45" viewBox="0 0 59 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M20.2798 19.56C22.5198 20.6 24.2398 22.16 25.4398 24.24C26.7198 26.24 27.3598 28.6 27.3598 31.32C27.3598 35.32 26.0798 38.56 23.5198 41.04C20.9598 43.52 17.6798 44.76 13.6798 44.76C9.67977 44.76 6.39977 43.52 3.83977 41.04C1.27977 38.56 -0.000234291 35.32 -0.000234291 31.32C-0.000234291 29.48 0.239766 27.64 0.719766 25.8C1.19977 23.96 2.27977 21.24 3.95977 17.64L11.6398 -2.71797e-05H25.9198L20.2798 19.56ZM51.7198 19.56C53.9598 20.6 55.6798 22.16 56.8798 24.24C58.1598 26.24 58.7998 28.6 58.7998 31.32C58.7998 35.32 57.5198 38.56 54.9598 41.04C52.3998 43.52 49.1198 44.76 45.1198 44.76C41.1198 44.76 37.8398 43.52 35.2798 41.04C32.7198 38.56 31.4398 35.32 31.4398 31.32C31.4398 29.48 31.6798 27.64 32.1598 25.8C32.6398 23.96 33.7198 21.24 35.3998 17.64L43.0798 -2.71797e-05H57.3598L51.7198 19.56Z"
+											fill="#00A092" />
+									</svg>
+								</div>
+								<span class="review-card__location">Toronto, November 2020</span>
+								<p class="review-card__text text">
+									We so enjoy the ever-evolving selection of animals from around the globe. THANK YOU for sharing these
+									fascinating animal friends with us so that we may learn and increase our understanding of the animal kingdom.
+								</p>
+								<span class="review-card__user-name">Carol Larsen</span>
+							</div>
+							<div class="review-card">
+								<div class="review-card__icon">
+									<svg width="59" height="45" viewBox="0 0 59 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M20.2798 19.56C22.5198 20.6 24.2398 22.16 25.4398 24.24C26.7198 26.24 27.3598 28.6 27.3598 31.32C27.3598 35.32 26.0798 38.56 23.5198 41.04C20.9598 43.52 17.6798 44.76 13.6798 44.76C9.67977 44.76 6.39977 43.52 3.83977 41.04C1.27977 38.56 -0.000234291 35.32 -0.000234291 31.32C-0.000234291 29.48 0.239766 27.64 0.719766 25.8C1.19977 23.96 2.27977 21.24 3.95977 17.64L11.6398 -2.71797e-05H25.9198L20.2798 19.56ZM51.7198 19.56C53.9598 20.6 55.6798 22.16 56.8798 24.24C58.1598 26.24 58.7998 28.6 58.7998 31.32C58.7998 35.32 57.5198 38.56 54.9598 41.04C52.3998 43.52 49.1198 44.76 45.1198 44.76C41.1198 44.76 37.8398 43.52 35.2798 41.04C32.7198 38.56 31.4398 35.32 31.4398 31.32C31.4398 29.48 31.6798 27.64 32.1598 25.8C32.6398 23.96 33.7198 21.24 35.3998 17.64L43.0798 -2.71797e-05H57.3598L51.7198 19.56Z"
+											fill="#00A092" />
+									</svg>
+								</div>
+								<span class="review-card__location">London, February 2020</span>
+								<p class="review-card__text text">
+									A fantastic experience for kids and adults alike! If anyone is looking for an attraction that educates people
+									on wild animals – it's for you! I highly recommend seeing for yourself the variety of animals on your screen.
+								</p>
+								<span class="review-card__user-name">C. Stockman</span>
+							</div>
+							<div class="review-card">
+								<div class="review-card__icon">
+									<svg width="59" height="45" viewBox="0 0 59 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M20.2798 19.56C22.5198 20.6 24.2398 22.16 25.4398 24.24C26.7198 26.24 27.3598 28.6 27.3598 31.32C27.3598 35.32 26.0798 38.56 23.5198 41.04C20.9598 43.52 17.6798 44.76 13.6798 44.76C9.67977 44.76 6.39977 43.52 3.83977 41.04C1.27977 38.56 -0.000234291 35.32 -0.000234291 31.32C-0.000234291 29.48 0.239766 27.64 0.719766 25.8C1.19977 23.96 2.27977 21.24 3.95977 17.64L11.6398 -2.71797e-05H25.9198L20.2798 19.56ZM51.7198 19.56C53.9598 20.6 55.6798 22.16 56.8798 24.24C58.1598 26.24 58.7998 28.6 58.7998 31.32C58.7998 35.32 57.5198 38.56 54.9598 41.04C52.3998 43.52 49.1198 44.76 45.1198 44.76C41.1198 44.76 37.8398 43.52 35.2798 41.04C32.7198 38.56 31.4398 35.32 31.4398 31.32C31.4398 29.48 31.6798 27.64 32.1598 25.8C32.6398 23.96 33.7198 21.24 35.3998 17.64L43.0798 -2.71797e-05H57.3598L51.7198 19.56Z"
+											fill="#00A092" />
+									</svg>
+								</div>
+								<span class="review-card__location">Amsterdam, June 2020</span>
+								<p class="review-card__text text">
+									I want to thank you for the amazing sites you find to put your cameras to let each of us see things that we
+									would probably never see on our own. There are so many positives on Zoo Online and I'm grateful for it. Thank
+									you so much!
+								</p>
+								<span class="review-card__user-name">Tomas Ray</span>
+							</div>
+							<div class="review-card">
+								<div class="review-card__icon">
+									<svg width="59" height="45" viewBox="0 0 59 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M20.2798 19.56C22.5198 20.6 24.2398 22.16 25.4398 24.24C26.7198 26.24 27.3598 28.6 27.3598 31.32C27.3598 35.32 26.0798 38.56 23.5198 41.04C20.9598 43.52 17.6798 44.76 13.6798 44.76C9.67977 44.76 6.39977 43.52 3.83977 41.04C1.27977 38.56 -0.000234291 35.32 -0.000234291 31.32C-0.000234291 29.48 0.239766 27.64 0.719766 25.8C1.19977 23.96 2.27977 21.24 3.95977 17.64L11.6398 -2.71797e-05H25.9198L20.2798 19.56ZM51.7198 19.56C53.9598 20.6 55.6798 22.16 56.8798 24.24C58.1598 26.24 58.7998 28.6 58.7998 31.32C58.7998 35.32 57.5198 38.56 54.9598 41.04C52.3998 43.52 49.1198 44.76 45.1198 44.76C41.1198 44.76 37.8398 43.52 35.2798 41.04C32.7198 38.56 31.4398 35.32 31.4398 31.32C31.4398 29.48 31.6798 27.64 32.1598 25.8C32.6398 23.96 33.7198 21.24 35.3998 17.64L43.0798 -2.71797e-05H57.3598L51.7198 19.56Z"
+											fill="#00A092" />
+									</svg>
+								</div>
+								<span class="review-card__location">Sydney, March 2021</span>
+								<p class="review-card__text text">
+									The live camera streams are absolutely breathtaking. Watching the elephants roam freely at dawn felt like I was
+									truly there. This is the closest thing to a real safari I've ever experienced.
+								</p>
+								<span class="review-card__user-name">James Whitfield</span>
+							</div>
+							<div class="review-card">
+								<div class="review-card__icon">
+									<svg width="59" height="45" viewBox="0 0 59 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M20.2798 19.56C22.5198 20.6 24.2398 22.16 25.4398 24.24C26.7198 26.24 27.3598 28.6 27.3598 31.32C27.3598 35.32 26.0798 38.56 23.5198 41.04C20.9598 43.52 17.6798 44.76 13.6798 44.76C9.67977 44.76 6.39977 43.52 3.83977 41.04C1.27977 38.56 -0.000234291 35.32 -0.000234291 31.32C-0.000234291 29.48 0.239766 27.64 0.719766 25.8C1.19977 23.96 2.27977 21.24 3.95977 17.64L11.6398 -2.71797e-05H25.9198L20.2798 19.56ZM51.7198 19.56C53.9598 20.6 55.6798 22.16 56.8798 24.24C58.1598 26.24 58.7998 28.6 58.7998 31.32C58.7998 35.32 57.5198 38.56 54.9598 41.04C52.3998 43.52 49.1198 44.76 45.1198 44.76C41.1198 44.76 37.8398 43.52 35.2798 41.04C32.7198 38.56 31.4398 35.32 31.4398 31.32C31.4398 29.48 31.6798 27.64 32.1598 25.8C32.6398 23.96 33.7198 21.24 35.3998 17.64L43.0798 -2.71797e-05H57.3598L51.7198 19.56Z"
+											fill="#00A092" />
+									</svg>
+								</div>
+								<span class="review-card__location">Berlin, August 2021</span>
+								<p class="review-card__text text">
+									My daughter has been watching the panda enclosure every morning before school. It has sparked such curiosity in
+									her about nature and conservation. We are so grateful for this wonderful resource.
+								</p>
+								<span class="review-card__user-name">Petra Hoffmann</span>
+							</div>
+							<div class="review-card">
+								<div class="review-card__icon">
+									<svg width="59" height="45" viewBox="0 0 59 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M20.2798 19.56C22.5198 20.6 24.2398 22.16 25.4398 24.24C26.7198 26.24 27.3598 28.6 27.3598 31.32C27.3598 35.32 26.0798 38.56 23.5198 41.04C20.9598 43.52 17.6798 44.76 13.6798 44.76C9.67977 44.76 6.39977 43.52 3.83977 41.04C1.27977 38.56 -0.000234291 35.32 -0.000234291 31.32C-0.000234291 29.48 0.239766 27.64 0.719766 25.8C1.19977 23.96 2.27977 21.24 3.95977 17.64L11.6398 -2.71797e-05H25.9198L20.2798 19.56ZM51.7198 19.56C53.9598 20.6 55.6798 22.16 56.8798 24.24C58.1598 26.24 58.7998 28.6 58.7998 31.32C58.7998 35.32 57.5198 38.56 54.9598 41.04C52.3998 43.52 49.1198 44.76 45.1198 44.76C41.1198 44.76 37.8398 43.52 35.2798 41.04C32.7198 38.56 31.4398 35.32 31.4398 31.32C31.4398 29.48 31.6798 27.64 32.1598 25.8C32.6398 23.96 33.7198 21.24 35.3998 17.64L43.0798 -2.71797e-05H57.3598L51.7198 19.56Z"
+											fill="#00A092" />
+									</svg>
+								</div>
+								<span class="review-card__location">São Paulo, January 2022</span>
+								<p class="review-card__text text">
+									I used Zoo Online as part of my biology class and the students were completely engaged. Seeing real animals in
+									their habitat in real-time is something no textbook can replace. Truly outstanding.
+								</p>
+								<span class="review-card__user-name">Lucas Ferreira</span>
+							</div>
+							<div class="review-card">
+								<div class="review-card__icon">
+									<svg width="59" height="45" viewBox="0 0 59 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M20.2798 19.56C22.5198 20.6 24.2398 22.16 25.4398 24.24C26.7198 26.24 27.3598 28.6 27.3598 31.32C27.3598 35.32 26.0798 38.56 23.5198 41.04C20.9598 43.52 17.6798 44.76 13.6798 44.76C9.67977 44.76 6.39977 43.52 3.83977 41.04C1.27977 38.56 -0.000234291 35.32 -0.000234291 31.32C-0.000234291 29.48 0.239766 27.64 0.719766 25.8C1.19977 23.96 2.27977 21.24 3.95977 17.64L11.6398 -2.71797e-05H25.9198L20.2798 19.56ZM51.7198 19.56C53.9598 20.6 55.6798 22.16 56.8798 24.24C58.1598 26.24 58.7998 28.6 58.7998 31.32C58.7998 35.32 57.5198 38.56 54.9598 41.04C52.3998 43.52 49.1198 44.76 45.1198 44.76C41.1198 44.76 37.8398 43.52 35.2798 41.04C32.7198 38.56 31.4398 35.32 31.4398 31.32C31.4398 29.48 31.6798 27.64 32.1598 25.8C32.6398 23.96 33.7198 21.24 35.3998 17.64L43.0798 -2.71797e-05H57.3598L51.7198 19.56Z"
+											fill="#00A092" />
+									</svg>
+								</div>
+								<span class="review-card__location">Tokyo, April 2022</span>
+								<p class="review-card__text text">
+									As someone who travels frequently, I love being able to reconnect with the animal world from anywhere in the
+									world. The image quality is incredible and the variety of species never stops amazing me.
+								</p>
+								<span class="review-card__user-name">Yuki Nakamura</span>
+							</div>
 						</div>
 						<div class="review__arrows">
-							<button class="btn btn--white-no-bg">
+							<button id="review-prev" class="btn btn--white-no-bg">
 								<svg
 									class="arrow--rotate-180"
 									width="25"
@@ -374,7 +628,7 @@
 										fill="white" />
 								</svg>
 							</button>
-							<button class="btn btn--white-no-bg">
+							<button id="review-next" class="btn btn--white-no-bg">
 								<svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path
 										fill-rule="evenodd"
@@ -411,7 +665,7 @@
 							<img src="../../assets/images/panda-eat.png" alt="panda eating" />
 							<div class="animals__card-description">
 								<p class="text">Your $30 could give Lucas a slice of panda cake, made with our secret recipe.</p>
-								<button class="btn btn--orange-no-bg">
+								<button class="animals__card-btn btn btn--orange-no-bg">
 									<span>feed</span>
 									<svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path
@@ -424,10 +678,10 @@
 							</div>
 						</div>
 						<div class="animals__card">
-							<img src="../../assets/images/panda-eat.png" alt="panda eating" />
+							<img src="../../assets/images/tiger-care.png" alt="tiger care" />
 							<div class="animals__card-description">
-								<p class="text">Your $30 could give Lucas a slice of panda cake, made with our secret recipe.</p>
-								<button class="btn btn--orange-no-bg">
+								<p class="text">Your $150 will help to care for Senja, a Sumatran tiger, for three weeks.</p>
+								<button class="animals__card-btn btn btn--orange-no-bg">
 									<span>feed</span>
 									<svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path
@@ -440,10 +694,13 @@
 							</div>
 						</div>
 						<div class="animals__card">
-							<img src="../../assets/images/panda-eat.png" alt="panda eating" />
+							<img src="../../assets/images/andy-care.png" alt="andy care" />
 							<div class="animals__card-description">
-								<p class="text">Your $30 could give Lucas a slice of panda cake, made with our secret recipe.</p>
-								<button class="btn btn--orange-no-bg">
+								<p class="text">
+									With your support, we can give Andy his favorite fruits. Especially when it's not fruit season in its natural
+									habitat.
+								</p>
+								<button class="animals__card-btn btn btn--orange-no-bg">
 									<span>feed</span>
 									<svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path
@@ -456,10 +713,10 @@
 							</div>
 						</div>
 						<div class="animals__card">
-							<img src="../../assets/images/panda-eat.png" alt="panda eating" />
+							<img src="../../assets/images/eagle-care.png" alt="eagle care" />
 							<div class="animals__card-description">
-								<p class="text">Your $30 could give Lucas a slice of panda cake, made with our secret recipe.</p>
-								<button class="btn btn--orange-no-bg">
+								<p class="text">Sam & Lora have hatched and raised numerous young and will be happy with your help.</p>
+								<button class="animals__card-btn btn btn--orange-no-bg">
 									<span>feed</span>
 									<svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path
@@ -472,6 +729,7 @@
 							</div>
 						</div>
 					</div>
+					<div class="animals__dots"></div>
 					<button class="pets__btn btn btn--navy-border">
 						<span>choose your favourite</span>
 						<svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -483,7 +741,11 @@
 						</svg>
 					</button>
 				</div>
-				<img class="pets__film" src="../../assets/images/touch-the-animal.png" alt="" />
+			</section>
+			<section class="video">
+				<div class="video__container">
+					<img class="video__film" src="../../assets/images/touch-the-animal.png" alt="" />
+				</div>
 			</section>
 		</main>
 		<footer class="footer">

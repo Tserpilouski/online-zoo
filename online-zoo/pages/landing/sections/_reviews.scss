@@ -6,11 +6,14 @@
 	justify-content: center;
 	padding: 100px 40px 150px 40px;
 	background-image: url('../../../assets/images/review-panda.png');
+	background-repeat: no-repeat;
+	background-size: cover;
 	color: $white;
 
 	&__container {
 		display: flex;
 		flex-direction: row;
+		justify-content: center;
 		gap: 40px;
 		margin-bottom: 376px;
 	}
@@ -29,6 +32,11 @@
 
 	&__items {
 		margin-bottom: 60px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-auto-flow: column;
+		gap: 40px;
 	}
 
 	&__arrows {
@@ -90,10 +98,20 @@
 
 		&__items {
 			margin-bottom: 100px;
+			justify-items: end;
 		}
 
 		&__arrows {
 			justify-content: end;
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.review {
+		&__items {
+			grid-template-columns: 1fr;
+			margin-bottom: 100px;
 		}
 	}
 }

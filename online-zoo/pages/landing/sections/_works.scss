@@ -29,6 +29,12 @@
 	&__title {
 		margin-bottom: 50px;
 	}
+
+	&__img {
+		width: 100%;
+		max-width: 800px;
+		border-radius: 0.5rem;
+	}
 }
 
 @media (max-width: $breakpoint-lg) {

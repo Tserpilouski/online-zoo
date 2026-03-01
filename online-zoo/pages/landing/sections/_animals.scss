@@ -31,16 +31,22 @@
 		max-width: 1400px;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(2, minmax(0, 658px));
+		grid-template-rows: repeat(2, 1fr);
 		gap: 40px;
 		margin-bottom: 100px;
 	}
 
 	&__card {
+		display: flex;
+		flex-direction: column;
 		background-color: $navy;
+		border-radius: 5px;
+		overflow: hidden;
 
 		img {
 			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
 
 		&--main {
@@ -50,19 +56,32 @@
 	}
 
 	&__card-description {
-		padding: 30px 25px;
+		padding: 30px 25px 50px 25px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		justify-content: space-between;
 		text-align: center;
-		gap: 50px;
+		height: 100%;
 		color: $white;
+	}
+
+	&__card-btn {
+		padding: 26px 29px;
+	}
+
+	&__dots {
+		display: none;
 	}
 }
 
 @media (max-width: $breakpoint-lg) {
 	.animals {
-		padding: 150px 135px;
+		padding-top: 150px;
+		padding-bottom: 150px;
+		padding-left: clamp(20px, calc(20px + (135 - 20) * ((100vw - 640px) / (1200 - 640))), 135px);
+		padding-right: clamp(20px, calc(20px + (135 - 20) * ((100vw - 640px) / (1200 - 640))), 135px);
+
 		&__description {
 			gap: 30px;
 			margin-bottom: 50px;
@@ -70,7 +89,7 @@
 
 		&__grid-box {
 			grid-template-columns: repeat(2, 1fr);
-			grid-template-rows: repeat(3 minmax(0, 658px));
+			grid-template-rows: repeat(3, 1fr);
 			gap: 20px;
 		}
 
@@ -92,14 +111,44 @@
 		}
 
 		&__grid-box {
-			grid-template-columns: repeat(1, 1fr);
-			grid-template-rows: repeat(1 minmax(0, 658px));
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 24px;
 		}
 
 		&__card {
+			height: 297px;
+			flex-direction: row;
+
+			img {
+				width: 50%;
+			}
 			&--main {
-				grid-row: span 1;
-				grid-column: span 1;
+				display: none;
+			}
+		}
+
+		&__card-description {
+			padding: 66px 20px 34px 20px;
+		}
+
+		&__dots {
+			display: flex;
+			justify-content: center;
+			gap: 10px;
+			margin-bottom: 60px;
+
+			.animals__dot {
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+				background-color: rgba($navy, 0.2);
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+
+				&--active {
+					background-color: $navy;
+				}
 			}
 		}
 	}
