@@ -1,0 +1,103 @@
+@use '../../../styles/variables' as *;
+
+.map {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	padding-top: 40px;
+	padding-bottom: 150px;
+
+	&__title {
+		margin-bottom: 70px;
+		max-width: 600px;
+		width: 100%;
+		text-transform: uppercase;
+		color: $navy;
+		text-align: center;
+	}
+
+	&__box {
+		position: relative;
+		width: 100%;
+		max-width: 1400px;
+	}
+
+	&__map-img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	&__pin {
+		position: absolute;
+		width: 7.14%;
+		cursor: pointer;
+
+		&--coala {
+			bottom: 16%;
+			right: 11.57%;
+		}
+
+		&--tiger {
+			bottom: 26%;
+			right: 21%;
+		}
+
+		&--panda {
+			bottom: 45.71%;
+			right: 25.43%;
+		}
+
+		&--squirrel {
+			bottom: 18.57%;
+			right: 36.64%;
+		}
+
+		&--monkey {
+			bottom: 31.76%;
+			right: 44%;
+		}
+
+		&--crocodile {
+			bottom: 39.45%;
+			left: 20.64%;
+		}
+
+		&--lion {
+			bottom: 34.29%;
+			left: 41%;
+		}
+
+		&--eagle {
+			bottom: 40.88%;
+			left: 11.71%;
+		}
+
+		&:hover {
+			[class*='map__icon-']:not([class*='--active']) {
+				display: none;
+			}
+
+			[class*='map__icon-'][class*='--active'] {
+				display: block;
+				width: 100%;
+				object-fit: fill;
+			}
+		}
+	}
+
+	&__icon {
+		@each $animal in coala, tiger, panda, squirrel, monkey, crocodile, lion, eagle {
+			&-#{$animal} {
+				display: block;
+				width: 100%;
+				object-fit: fill;
+
+				&--active {
+					display: none;
+				}
+			}
+		}
+	}
+}

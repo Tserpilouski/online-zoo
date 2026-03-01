@@ -15,14 +15,22 @@
 	}
 
 	&__logos {
+		max-width: 414px;
+		width: 100%;
 		display: flex;
-		gap: 65px;
+		justify-content: space-between;
+	}
+
+	&__navigation {
+		max-width: 425px;
+		width: 100%;
 	}
 
 	&__nav {
 		display: flex;
-		gap: 46px;
+		justify-content: space-between;
 		color: $white;
+		white-space: nowrap;
 	}
 
 	&__nav-box {
@@ -52,6 +60,7 @@
 	&__copyright {
 		display: flex;
 		gap: 50px;
+		white-space: nowrap;
 	}
 	&__social {
 		display: flex;
@@ -62,12 +71,13 @@
 		max-width: 359px;
 		width: 100%;
 		height: 74px;
+		white-space: nowrap;
 	}
 }
 
 @media (max-width: $breakpoint-lg) {
 	.footer {
-		padding-top: 82px;
+		padding-top: 70px;
 
 		&__nav-box {
 			padding: 0 40px;
@@ -75,6 +85,120 @@
 
 		&__info-box {
 			padding: 0 40px;
+		}
+
+		&__logos {
+			max-width: 344px;
+		}
+
+		&__navigation {
+			max-width: 347px;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.footer {
+		&__nav-box {
+			flex-wrap: wrap;
+			gap: 50px;
+			align-items: center;
+			justify-content: center;
+		}
+
+		&__info-box {
+			flex-direction: column-reverse;
+			align-items: center;
+			padding: 0 40px;
+			gap: 30px;
+		}
+	}
+}
+
+@media (max-width: $breakpoint-sm) {
+	.footer {
+		padding-top: 49px;
+		padding-bottom: 50px;
+
+		&__nav-box {
+			padding: 0;
+			margin-bottom: 50px;
+		}
+
+		&__logos {
+			max-width: 446px;
+		}
+
+		&__navigation {
+			max-width: 446px;
+		}
+
+		&__devider {
+			margin-bottom: 50px;
+		}
+
+		&__social {
+			gap: 50px;
+		}
+
+		&__copyright {
+			gap: 49px;
+		}
+	}
+}
+
+@media (max-width: $breakpoint-s) {
+	.footer {
+		padding-top: 50px;
+		padding-bottom: 50px;
+
+		&__nav-box {
+			flex-direction: column;
+			padding: 0;
+			margin-bottom: 50px;
+			gap: 30px;
+			padding: 0 10px;
+		}
+
+		&__info-box {
+			flex-direction: column-reverse;
+			align-items: center;
+			padding: 0 40px;
+			gap: 30px;
+		}
+
+		&__logos {
+			max-width: 100%;
+			flex-direction: column;
+			align-items: center;
+			gap: 30px;
+		}
+
+		&__navigation {
+			max-width: 100%;
+		}
+
+		&__nav-item {
+			font-size: 16px;
+			line-height: 16px;
+		}
+
+		&__devider {
+			margin-bottom: 50px;
+		}
+
+		&__social {
+			gap: 50px;
+		}
+
+		&__copyright {
+			flex-direction: column;
+			gap: 30px;
+		}
+
+		&__btn {
+			height: 45px;
+			text-transform: none;
 		}
 	}
 }
