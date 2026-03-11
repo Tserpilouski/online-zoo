@@ -85,7 +85,7 @@ if (animalsGrid && animalsDotsContainer) {
 
 	function renderAnimals() {
 		if (window.innerWidth > 640) {
-			cards.forEach(card => (card.style.display = ''));
+			cards.forEach((card) => (card.style.display = ''));
 			return;
 		}
 		cards.forEach((card, i) => {
