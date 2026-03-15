@@ -2,6 +2,7 @@ import './style.scss';
 import { apiClient } from '../../api/client.ts';
 import type { Pet, Feedback } from '../../types/api.ts';
 import { initHeaderUser } from '../../auth/header-user.ts';
+import { initDonationPopup, openPopup } from '../../popup/donation-popup.ts';
 
 const ARROW_SVG = `<svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<path fill-rule="evenodd" clip-rule="evenodd"
@@ -82,9 +83,9 @@ function createErrorMessage(): HTMLParagraphElement {
 	return el;
 }
 
-async function loadPets(): Promise<void> {
+async function loadPets(): Promise<Pet[]> {
 	const petsItems = document.querySelector('.pets__items');
-	if (!petsItems) return;
+	if (!petsItems) return [];
 
 	try {
 		const [data] = await Promise.all([
@@ -100,18 +101,20 @@ async function loadPets(): Promise<void> {
 		pets.forEach((pet) => {
 			petsItems.appendChild(createPetCard(pet));
 		});
+		petsItems.querySelector('.pets__loader')?.remove();
+		initPetsCarousel();
+		return pets;
 	} catch (err) {
 		console.error('[API] GET /pets failed', err);
 		const loader = petsItems.querySelector('.pets__loader');
 		if (loader) loader.replaceWith(createErrorMessage());
-		return;
+		return [];
 	}
-
-	petsItems.querySelector('.pets__loader')?.remove();
-	initPetsCarousel();
 }
 
-loadPets();
+loadPets().then((pets) => {
+	initDonationPopup(pets);
+});
 
 const burgerBtn = document.getElementById('header-burger');
 const mobileMenu = document.getElementById('header-mobile-menu');
@@ -268,3 +271,6 @@ async function loadFeedback(): Promise<void> {
 }
 
 loadFeedback();
+
+const donateBtn = document.getElementById('donate-btn');
+donateBtn?.addEventListener('click', openPopup);

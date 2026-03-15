@@ -204,7 +204,7 @@
 					</div>
 					<div class="donation__amount">
 						<span class="donation__label">Quick Donate</span>
-						<button class="btn btn--donate">
+						<button class="btn btn--donate" id="donate-btn">
 							<span>$ Donation Amount</span>
 							<div>
 								<svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -577,6 +577,11 @@
 			</div>
 		</footer>
 		<div id="app"></div>
+
+		<!-- Donation Popup -->
+		<div id="donation-popup-overlay" class="popup-overlay">
+			<div class="donation-popup"></div>
+		</div>
 		<script type="module" src="./script.ts"></script>
 	</body>
 </html>
