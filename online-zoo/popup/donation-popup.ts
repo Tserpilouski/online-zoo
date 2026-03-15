@@ -42,12 +42,10 @@ const YEARS = Array.from({ length: 10 }, (_, i) => currentYear + i);
 
 interface State {
 	step: 1 | 2 | 3;
-	// step 1
 	amount: number | null;
 	petId: number | null;
 	recurring: boolean;
 	selectedPreset: number | null;
-	// step 2
 	name: string;
 	email: string;
 }
@@ -385,7 +383,6 @@ function renderStep3(popup: Element, pets: Pet[]): void {
 		}
 	});
 
-	// Format card number with spaces every 4 digits
 	const cardInput = popup.querySelector<HTMLInputElement>('#donation-card');
 	cardInput?.addEventListener('input', () => {
 		const digits = cardInput.value.replace(/\D/g, '').slice(0, 16);

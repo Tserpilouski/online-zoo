@@ -43,8 +43,10 @@ export class ApiClient {
 		return this.request<Pet[]>('/pets');
 	}
 
-	getPetById(id: number): Promise<Pet> {
-		return this.request<Pet>(`/pets/${id}`);
+	async getPetById(id: number): Promise<Pet> {
+		const res = await this.request<Pet | { data: Pet }>(`/pets/${id}`);
+		const pet = (res as { data?: Pet }).data ?? (res as Pet);
+		return pet;
 	}
 
 	getCameras(): Promise<Camera[]> {

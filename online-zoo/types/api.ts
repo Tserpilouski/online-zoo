@@ -1,14 +1,34 @@
+export interface PetLocation {
+	lat?: number;
+	lng?: number;
+	latitude?: number;
+	longitude?: number;
+}
+
 export interface Pet {
 	id: number;
-	name: string;
+	name?: string;
 	commonName?: string;
+	scientificName?: string;
 	description?: string;
-	imageUrl?: string;
+	detailedDescription?: string;
+	type?: string;
+	size?: string;
+	diet?: string;
+	habitat?: string;
+	range?: string;
+	latitude?: string;
+	longitude?: string;
+	location?: PetLocation;
 	[key: string]: unknown;
 }
 
 export interface Camera {
 	id: number;
+	name?: string;
+	title?: string;
+	description?: string;
+	petId?: number;
 	[key: string]: unknown;
 }
 

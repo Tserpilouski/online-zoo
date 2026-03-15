@@ -1,11 +1,37 @@
 @use '../../../styles/variables' as *;
 
 .info {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	padding: 150px 0;
+
+	&__overlay {
+		position: absolute;
+		inset: 0;
+		z-index: 20;
+		background: rgba($white, 0.85);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__error-text {
+		font-family: $font-primary;
+		font-size: 16px;
+		color: $navy;
+		text-align: center;
+		padding: 20px;
+	}
+
+	&__pet-img {
+		max-width: 600px;
+		width: 100%;
+		object-fit: cover;
+		border-radius: 4px;
+	}
 
 	&__text-box {
 		max-width: 1040px;

@@ -154,6 +154,35 @@
 		</header>
 		<main>
 			<section class="live-cam">
+				<aside class="side-panel" id="side-panel">
+					<div class="side-panel__top">
+						<div class="side-panel__live-badge">
+							<span class="side-panel__live-text">LIVE</span>
+							<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="11" cy="7" r="4" fill="white" />
+								<path d="M2 20c0-4.97 4.03-9 9-9s9 4.03 9 9" stroke="white" stroke-width="2" stroke-linecap="round" />
+							</svg>
+						</div>
+						<button class="side-panel__toggle" id="side-panel-toggle" aria-label="Toggle side panel">
+							<svg class="side-panel__chevron side-panel__chevron--collapse" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10 2L5 7L10 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M5 2L0 7L5 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+							<svg class="side-panel__chevron side-panel__chevron--expand" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M4 2L9 7L4 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M9 2L14 7L9 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</button>
+					</div>
+					<ul class="side-panel__list" id="side-panel-list">
+						<li class="side-panel__loader">Loading...</li>
+					</ul>
+					<button class="side-panel__scroll-btn" aria-label="Scroll down">
+						<svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1 1L8 9L15 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</button>
+				</aside>
 				<div class="live-cam__container">
 					<div class="live-cam__header">
 						<h1 class="live-cam__title h2">live panda cams</h1>
@@ -168,8 +197,15 @@
 							</svg>
 						</button>
 					</div>
-					<img class="live-cam__img" src="../../assets/images/panda-live.png" alt="" />
-					<div class="live-cam__views">
+					<div class="live-cam__cam-area">
+					<div class="live-cam__cam-loader" id="live-cam-loader">
+						<div class="spinner"></div>
+					</div>
+					<div class="live-cam__cam-error" id="live-cam-error" style="display:none">
+						<p>Something went wrong. Please, refresh the page</p>
+					</div>
+					<img class="live-cam__img" id="live-cam-main-img" src="../../assets/images/panda-live.png" alt="" style="display:none" />
+					<div class="live-cam__views" id="live-cam-views" style="display:none">
 						<h2 class="h3">more live views</h2>
 						<div class="live-cam__slider">
 							<button class="btn btn--arrow">
@@ -187,7 +223,7 @@
 										fill="black" />
 								</svg>
 							</button>
-							<div class="live-cam__slider-box">
+							<div class="live-cam__slider-box" id="live-cam-slider-box">
 								<div class="live-cam__card live-cam__card--active">
 									<div class="live-cam__card-title">
 										<span>cam 1</span>
@@ -249,6 +285,7 @@
 						</div>
 					</div>
 				</div>
+			</div>
 			</section>
 			<section class="live-donate">
 				<div class="live-donate__container">
@@ -275,15 +312,18 @@
 					</button>
 				</div>
 			</section>
-			<section class="info">
-				<div class="info__text-box">
+			<section class="info" id="info-section">
+				<div class="info__overlay" id="info-overlay" style="display:none">
+					<div class="spinner"></div>
+				</div>
+				<div class="info__text-box" id="info-text-box">
 					<h3 class="h3">did you know?</h3>
 					<p class="text">
 						Pandas are often seen eating in a relaxed sitting posture, with their hind legs stretched out before them. They
 						may appear sedentary, but they are skilled tree-climbers and efficient swimmers.
 					</p>
 				</div>
-				<div class="info__details">
+				<div class="info__details" id="info-details">
 					<div class="animal-card">
 						<div class="animal-card__item">
 							<span class="animal-card__label">Common name:</span>
@@ -326,7 +366,7 @@
 					</div>
 					<img src="../../assets/images//cute-panda.png" alt="" />
 				</div>
-				<div class="info__text-container">
+				<div class="info__text-container" id="info-text-container">
 					<p class="info__text text">
 						Giant pandas are very unusual animals that eat almost exclusively bamboo, which is very low in nutrients. Because
 						of this, they have many unique adaptations for their low-energy lifestyle. Giant pandas are solitary. They have a
@@ -427,6 +467,12 @@
 				</div>
 			</div>
 		</footer>
+		<div class="map-modal" id="map-modal" style="display:none">
+			<div class="map-modal__content">
+				<button class="map-modal__close" id="map-modal-close" aria-label="Close map">&#x2715;</button>
+				<div id="map-container" class="map-modal__map"></div>
+			</div>
+		</div>
 		<div id="app"></div>
 		<script type="module" src="./script.ts"></script>
 	</body>

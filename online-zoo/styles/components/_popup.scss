@@ -1,6 +1,5 @@
 @use '../variables' as *;
 
-// Overlay
 .popup-overlay {
 	position: fixed;
 	inset: 0;
@@ -19,7 +18,6 @@
 	}
 }
 
-// Modal card
 .donation-popup {
 	background-color: $white;
 	border-radius: 8px;
@@ -29,7 +27,6 @@
 	margin: 20px;
 	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 
-	// Orange header
 	&__header {
 		background-color: $orange;
 		padding: 36px 40px;
@@ -46,7 +43,6 @@
 		margin: 0;
 	}
 
-	// White body
 	&__body {
 		padding: 32px 40px 40px;
 	}
@@ -65,7 +61,6 @@
 		margin-bottom: 28px;
 	}
 
-	// Amount buttons grid
 	&__amounts {
 		margin-bottom: 24px;
 	}
@@ -92,7 +87,7 @@
 	}
 
 	&__amount-btn {
-		background-color: #7bbcb8; // light teal from design
+		background-color: #7bbcb8;
 		color: $white;
 		font-family: $font-primary;
 		font-size: 16px;
@@ -109,7 +104,6 @@
 		}
 	}
 
-	// Row: label button + input
 	&__row {
 		display: flex;
 		align-items: stretch;
@@ -168,7 +162,6 @@
 		cursor: pointer;
 	}
 
-	// Checkbox row
 	&__checkbox-row {
 		display: flex;
 		align-items: center;
@@ -193,7 +186,6 @@
 		cursor: pointer;
 	}
 
-	// Step 2: field (label + input + hint)
 	&__field {
 		display: flex;
 		flex-direction: column;
@@ -231,7 +223,6 @@
 		margin-top: 2px;
 	}
 
-	// Back button (text link)
 	&__back-btn {
 		background: none;
 		border: none;
@@ -251,7 +242,6 @@
 		}
 	}
 
-	// Footer: step dots + next button
 	&__footer {
 		display: flex;
 		align-items: center;
@@ -304,7 +294,6 @@
 		}
 	}
 
-	// Step 3: teal field labels
 	&__field-label--teal {
 		color: $turquoise;
 
@@ -313,7 +302,6 @@
 		}
 	}
 
-	// Step 3: card + CVV side by side
 	&__payment-row {
 		display: flex;
 		gap: 20px;
@@ -338,7 +326,6 @@
 		}
 	}
 
-	// Step 3: expiry date row (two selects)
 	&__expiry-row {
 		display: flex;
 		gap: 16px;
@@ -348,7 +335,6 @@
 		}
 	}
 
-	// Custom select wrapper with teal chevron box
 	&__select-wrap {
 		position: relative;
 		flex: 1;
@@ -386,7 +372,6 @@
 		}
 	}
 
-	// "Complete Donation" orange button
 	&__complete-btn {
 		display: flex;
 		align-items: center;
@@ -418,7 +403,6 @@
 		}
 	}
 
-	// Success state
 	&__body--success {
 		display: flex;
 		flex-direction: column;
