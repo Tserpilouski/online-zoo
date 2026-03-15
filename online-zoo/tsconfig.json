@@ -4,12 +4,13 @@
 		"module": "ESNext",
 		"moduleResolution": "bundler",
 		"strict": true,
+		"noImplicitAny": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true,
 		"skipLibCheck": true,
 		"outDir": "./dist"
 	},
-	"include": ["pages/**/*.ts", "styles/**/*.ts"],
+	"include": ["pages/**/*.ts", "styles/**/*.ts", "types/**/*.ts", "api/**/*.ts"],
 	"exclude": ["node_modules", "dist"]
 }
