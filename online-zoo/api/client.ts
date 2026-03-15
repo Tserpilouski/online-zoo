@@ -14,6 +14,10 @@ const BASE_URL = 'https://vsqsnqnxkh.execute-api.eu-central-1.amazonaws.com/prod
 export class ApiClient {
 	private token: string | null = null;
 
+	setToken(token: string | null): void {
+		this.token = token;
+	}
+
 	private async request<T>(path: string, options: RequestInit = {}): Promise<T> {
 		const headers: Record<string, string> = {
 			'Content-Type': 'application/json',

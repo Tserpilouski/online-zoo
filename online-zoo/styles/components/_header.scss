@@ -45,6 +45,107 @@ header {
 		gap: 30px;
 	}
 
+	&__user {
+		position: relative;
+		display: flex;
+		align-items: center;
+	}
+
+	&__user-btn {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 6px 10px;
+		border-radius: 8px;
+		color: $black;
+		transition: background-color $transition-default;
+
+		&:hover {
+			background-color: rgba(0, 0, 0, 0.08);
+		}
+	}
+
+	&__user-name {
+		font-family: $font-primary;
+		font-size: 14px;
+		font-weight: 600;
+		text-transform: uppercase;
+		max-width: 120px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	&__user-popup {
+		display: none;
+		position: absolute;
+		top: calc(100% + 10px);
+		right: 0;
+		background: $white;
+		border-radius: 14px;
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.14);
+		min-width: 230px;
+		z-index: 200;
+		overflow: hidden;
+
+		&--open {
+			display: block;
+		}
+	}
+
+	&__mobile-user {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 14px;
+		border-top: 1px solid rgba(255, 255, 255, 0.2);
+		padding-top: 24px;
+		width: 100%;
+		text-align: center;
+	}
+
+	&__mobile-user-info {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
+
+	&__mobile-user-name {
+		font-family: $font-primary;
+		font-size: 18px;
+		font-weight: 600;
+		color: $white;
+		text-transform: uppercase;
+	}
+
+	&__mobile-user-email {
+		font-family: $font-secondary;
+		font-size: 14px;
+		color: rgba(255, 255, 255, 0.65);
+	}
+
+	&__mobile-signout {
+		background: none;
+		border: 2px solid rgba(255, 255, 255, 0.5);
+		border-radius: 8px;
+		color: $white;
+		font-family: $font-primary;
+		font-size: 14px;
+		font-weight: 600;
+		text-transform: uppercase;
+		padding: 10px 24px;
+		cursor: pointer;
+		transition: border-color $transition-default, background-color $transition-default;
+
+		&:hover {
+			border-color: $white;
+			background-color: rgba(255, 255, 255, 0.1);
+		}
+	}
+
 	&__burger {
 		display: none;
 		flex-direction: column;
@@ -97,6 +198,91 @@ header {
 		flex-direction: column;
 		align-items: center;
 		gap: 40px;
+	}
+}
+
+.user-popup {
+	&__profile {
+		padding: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 14px;
+	}
+
+	&__avatar {
+		width: 56px;
+		height: 56px;
+		border-radius: 50%;
+		background-color: rgba($orange, 0.12);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $orange;
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+		text-align: center;
+		width: 100%;
+	}
+
+	&__name {
+		font-family: $font-primary;
+		font-size: 16px;
+		font-weight: 700;
+		color: $navy;
+	}
+
+	&__email {
+		font-family: $font-secondary;
+		font-size: 13px;
+		color: rgba(32, 17, 61, 0.55);
+		word-break: break-all;
+	}
+
+	&__signout {
+		width: 100%;
+		padding: 10px 16px;
+		background: none;
+		border: 2px solid rgba(32, 17, 61, 0.2);
+		border-radius: 8px;
+		font-family: $font-primary;
+		font-size: 13px;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: $navy;
+		cursor: pointer;
+		transition: border-color $transition-default, background-color $transition-default, color $transition-default;
+
+		&:hover {
+			border-color: $navy;
+			background-color: $navy;
+			color: $white;
+		}
+	}
+
+	&__link {
+		display: block;
+		padding: 14px 20px;
+		font-family: $font-primary;
+		font-size: 14px;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: $navy;
+		text-decoration: none;
+		transition: background-color $transition-default, color $transition-default;
+
+		&:hover {
+			background-color: rgba($orange, 0.08);
+			color: $orange;
+		}
+
+		& + & {
+			border-top: 1px solid rgba(0, 0, 0, 0.07);
+		}
 	}
 }
 

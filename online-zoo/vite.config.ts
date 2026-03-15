@@ -12,6 +12,8 @@ export default defineConfig({
 				map: resolve(__dirname, 'pages/map/index.html'),
 				zoos: resolve(__dirname, 'pages/zoos/index.html'),
 				'contact-us': resolve(__dirname, 'pages/contact-us/index.html'),
+			'sign-in': resolve(__dirname, 'pages/sign-in/index.html'),
+			registration: resolve(__dirname, 'pages/registration/index.html'),
 			},
 		},
 		cssCodeSplit: false,

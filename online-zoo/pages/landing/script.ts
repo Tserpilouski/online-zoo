@@ -1,6 +1,7 @@
 import './style.scss';
 import { apiClient } from '../../api/client.ts';
 import type { Pet, Feedback } from '../../types/api.ts';
+import { initHeaderUser } from '../../auth/header-user.ts';
 
 const ARROW_SVG = `<svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<path fill-rule="evenodd" clip-rule="evenodd"
@@ -126,6 +127,8 @@ if (burgerBtn && mobileMenu && mobileClose) {
 		document.body.style.overflow = '';
 	});
 }
+
+initHeaderUser();
 
 const animalsGrid = document.querySelector('.animals__grid-box');
 const animalsDotsContainer = document.querySelector('.animals__dots');

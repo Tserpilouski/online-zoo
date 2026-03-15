@@ -1,4 +1,5 @@
 import './style.scss';
+import { initHeaderUser } from '../../auth/header-user.ts';
 
 const burgerBtn = document.getElementById('header-burger');
 const mobileMenu = document.getElementById('header-mobile-menu');
@@ -14,3 +15,5 @@ if (burgerBtn && mobileMenu && mobileClose) {
 		document.body.style.overflow = '';
 	});
 }
+
+initHeaderUser();
