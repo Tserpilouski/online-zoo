@@ -1,0 +1,12 @@
+@use '../../../styles/variables' as *;
+
+.video {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 150px;
+
+	&__film {
+		max-width: 1200px;
+		width: 100%;
+	}
+}

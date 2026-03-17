@@ -1,0 +1,83 @@
+@use '../../../styles/variables' as *;
+
+.works {
+	display: flex;
+	justify-content: center;
+
+	&__container {
+		max-width: 1600px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 150px;
+		padding: 150px 100px;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 40px;
+
+		&:nth-child(2) {
+			flex-direction: row-reverse;
+		}
+	}
+}
+
+.work-box {
+	&__title {
+		margin-bottom: 50px;
+	}
+
+	&__img {
+		width: 100%;
+		max-width: 800px;
+		border-radius: 0.5rem;
+	}
+}
+
+@media (max-width: $breakpoint-lg) {
+	.works {
+		&__container {
+			gap: 50px;
+		}
+		&__item {
+			max-width: 660px;
+			flex-direction: column-reverse;
+
+			&:nth-child(2) {
+				flex-direction: column-reverse;
+				margin-left: auto;
+			}
+		}
+	}
+
+	.work-box {
+		&__img {
+			max-width: 660px;
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: $breakpoint-sm) {
+	.works {
+		&__container {
+			padding: 100px 0;
+		}
+
+		&__item {
+			gap: 50px;
+		}
+	}
+	.work-box {
+		&__img {
+			max-width: 100%;
+		}
+
+		&__description {
+			padding: 0 20px;
+		}
+	}
+}

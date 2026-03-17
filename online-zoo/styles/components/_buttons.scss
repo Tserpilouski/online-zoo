@@ -1,0 +1,142 @@
+@use '../variables' as *;
+
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	max-width: fit-content;
+	color: $black;
+	font-size: 18px;
+	font-weight: 600;
+	text-transform: uppercase;
+	cursor: pointer;
+	border-radius: 5px;
+
+	&--orange-bg {
+		background-color: $orange;
+		color: $white;
+
+		&:hover {
+			background-color: $orange-dark;
+		}
+	}
+
+	&--turquoise-bg {
+		background-color: $turquoise;
+		color: $white;
+
+		&:hover {
+			background-color: $turquoise-dark;
+		}
+	}
+
+	&--navy-border {
+		color: $navy;
+		border: 1px solid $navy;
+		border-radius: 5px;
+		background-color: transparent;
+		svg {
+			path {
+				fill: $navy;
+			}
+		}
+
+		&:hover {
+			background-color: $navy;
+			color: $white;
+			svg {
+				path {
+					fill: $white;
+				}
+			}
+		}
+	}
+
+	&--orange-no-bg {
+		color: $orange;
+		border: none;
+		background-color: transparent;
+
+		svg {
+			path {
+				fill: $orange;
+			}
+		}
+
+		&:hover {
+			background-color: $orange;
+			color: $white;
+
+			svg {
+				path {
+					fill: $white;
+				}
+			}
+		}
+	}
+
+	&--white-no-bg {
+		color: $white;
+		border: 1px solid $white;
+		background-color: transparent;
+		border-radius: 5px;
+
+		svg {
+			path {
+				fill: $white;
+			}
+		}
+
+		&:hover {
+			background-color: $white;
+			color: $navy;
+
+			svg {
+				path {
+					fill: $navy;
+				}
+			}
+		}
+	}
+
+	&--arrow {
+		background-color: transparent;
+	}
+
+	&--donate {
+		color: $white;
+		border: none;
+		background-color: transparent;
+		border: 1px solid $white;
+		gap: 0;
+		white-space: nowrap;
+
+		svg {
+			path {
+				fill: $white;
+			}
+		}
+
+		span {
+			margin: 26px 14px;
+		}
+
+		div {
+			padding: 26px 27px;
+			background-color: $orange;
+			border-radius: 5px;
+		}
+
+		&:hover {
+			background-color: $orange;
+			color: $white;
+
+			svg {
+				path {
+					fill: $white;
+				}
+			}
+		}
+	}
+}

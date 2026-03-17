@@ -1,0 +1,32 @@
+@use '../../styles/variables' as *;
+@use '../../styles/base';
+@use '../../styles/components/header';
+@use '../../styles/components/buttons';
+@use '../../styles/components/footer';
+@use '../../styles/components/popup';
+@use '../../styles/utilities';
+
+@use 'sections/hero';
+@use 'sections/animals';
+@use 'sections/pets';
+@use 'sections/feed';
+@use 'sections/reviews';
+@use 'sections/works';
+@use 'sections/donation';
+@use 'sections/video';
+
+@keyframes spin {
+	to { transform: rotate(360deg); }
+}
+
+.section-error {
+	grid-column: 1 / -1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 300px;
+	font-size: 20px;
+	text-align: center;
+	color: inherit;
+	opacity: 0.7;
+}
